@@ -2,15 +2,16 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #111; /* dark background */
-    color: white;
+    background: linear-gradient(to right, #fff3e0, #ffe0b2); /* soft cream gradient */
+    color: #333;
     text-align: center;
 }
 
 /* Header */
 header {
     padding: 20px;
-    background-color: #111;
+    background-color: #ff9800; /* orange */
+    color: white;
 }
 
 /* Navigation */
@@ -22,14 +23,16 @@ nav a {
     display: inline-block;
     padding: 10px 20px;
     margin: 5px;
-    background-color: white;
-    color: black;
+    background-color: #ffcc80; /* light orange */
+    color: #333;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 20px;
+    font-weight: bold;
 }
 
 nav a:hover {
-    background-color: #ddd;
+    background-color: #ffa726;
+    color: white;
 }
 
 /* Banner */
@@ -37,14 +40,17 @@ section:first-of-type {
     margin: 30px auto;
     width: 80%;
     height: 200px;
-    background-color: #eee;
-    color: black;
+
+    background: linear-gradient(to right, #ffb74d, #ff8a65);
+    color: white;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    border-radius: 10px;
+    border-radius: 15px;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 /* 3 Boxes Section */
@@ -57,15 +63,37 @@ section:last-of-type {
 
 /* Each Box */
 article {
-    background-color: #eee;
-    color: black;
+    background-color: white;
     width: 200px;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 15px;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Add different colors to each box */
+article:nth-child(1) {
+    border-top: 5px solid #e53935; /* red */
+}
+
+article:nth-child(2) {
+    border-top: 5px solid #1e88e5; /* blue */
+}
+
+article:nth-child(3) {
+    border-top: 5px solid #43a047; /* green */
+}
+
+/* Hover effect */
+article:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
 }
 
 /* Footer */
 footer {
     margin-top: 40px;
-    padding: 10px;
+    padding: 15px;
+    background-color: #ff9800;
+    color: white;
 }
