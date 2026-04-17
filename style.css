@@ -71,22 +71,46 @@ nav a {
     font-size: 18px;
 }
 
-/* Cards Section */
+/* Cards layout (horizontal) */
 .cards {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
     margin-top: 30px;
 }
 
-/* Each card */
+/* General card style */
 .cards article {
-    padding: 20px;
-    width: 200px;
-    border-radius: 15px;
-    font-weight: bold;
+    width: 220px;
+    padding: 25px;
+    border-radius: 20px;
     text-align: center;
+    font-weight: bold;
     color: white;
+
+    /* makes gradient edges look smooth */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+/* Hover effect */
+.cards article:hover {
+    transform: scale(1.08);
+}
+
+/* 🍫 Chocolate (creamy brown → dark brown edges) */
+.cards article:nth-child(1) {
+    background: linear-gradient(to bottom right, #d7a86e, #5c2c06);
+}
+
+/* 🫐 Blueberry (light blue → dark blue edges) */
+.cards article:nth-child(2) {
+    background: linear-gradient(to bottom right, #64b5f6, #0d47a1);
+}
+
+/* 🍌 Banana (yellow → darker yellow edges) */
+.cards article:nth-child(3) {
+    background: linear-gradient(to bottom right, #fff176, #f9a825);
 }
 
 /* Colorful cards */
