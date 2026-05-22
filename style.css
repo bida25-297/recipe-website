@@ -1,141 +1,242 @@
-/* Reset */
+/* RESET */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
 
-/* Rainbow Title */
-.logo {
-    text-align: center;
-    font-size: 40px;
-    font-weight: bold;
-    background: linear-gradient(
-        red, orange, yellow, green, blue, indigo, violet
-    );
-    -webkit-background-clip: text;
-    color: transparent;
-    padding: 20px;
-}
-
-/* Creamy Orange Background (below nav) */
-main {
-    background-color: #ffe0b2;
-    padding-bottom: 40px;
-}
-
-/* Navigation */
+/* NAVIGATION */
 nav {
-    text-align: center;
-    background-color: #ffcc80;
-    padding: 10px;
+    position: absolute;   /* puts it on top of image */
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+
+    display: flex;
+    justify-content: flex-end; /* moves links to right */
+    z-index: 1000; /* ADD THIS*/
 }
 
+/* Nav links */
 nav a {
+    color: red;
     margin: 10px;
-    padding: 10px 15px;
-    background-color: white;
     text-decoration: none;
-    border-radius: 10px;
-    color: black;
     font-weight: bold;
 }
+nav a:hover {
+    text-decoration: underline;
+} 
+nav {
+    background: rgba(0,0,0,0.4); /* trasnparent dark */
+}
 
-
-.banner {
+/* HERO SECTION */
+.hero {
     width: 100%;
-    height: 300px;
+    height: 100vh;
 
-    /* image */
-    background-image: url("./pancake.jpg");
+    background-image: url("pancake.jpg");
     background-size: cover;
     background-position: center;
 
-    /* Dark overlay for readibility */
-    background-blend-mode: darken;
-    background-color: rgba(0,0,0,0.4);
-
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
 
-    color: white;
-    text-align: center;
+    background-blend-mode: darken;
+    background-color: rgba(0,0,0,0.5);
 
+    padding-left: 60px;
 }
 
-/* Big text */
-.banner h2 {
-    font-size: 35px;
-    font-weight: bold;
+/* TEXT */
+.hero-text {
+    color: white;
+    max-width: 500px;
+}
+
+.hero-text h1 {
+    font-size: 60px;
     margin: 0;
 }
 
-/* Small text */
-.banner p {
+.hero-text p {
     font-size: 18px;
-    margin-top: 10px;
+    margin: 20px 0;
 }
-
-/* Cards layout (horizontal) */
+/* CARDS SECTION */
 .cards {
     display: flex;
     justify-content: center;
     gap: 25px;
-    margin-top: 30px;
+    padding: 40px;
+    background-color: #fff3e0; /* light creamy background */
 }
 
-/* General card style */
+/* EACH CARD */
 .cards article {
     width: 220px;
     padding: 25px;
     border-radius: 20px;
     text-align: center;
-    font-weight: bold;
     color: white;
+    font-weight: bold;
 
-    /* makes gradient edges look smooth */
     box-shadow: 0 6px 12px rgba(0,0,0,0.2);
     transition: 0.3s;
 }
 
-/* Hover effect */
+/* HOVER EFFECT */
 .cards article:hover {
     transform: scale(1.08);
 }
 
-/* 🍫 Chocolate (creamy brown → dark brown edges) */
+/* 🍫 CHOCOLATE */
 .cards article:nth-child(1) {
-    background: linear-gradient(to bottom right, #d7a86e, #5c2c06);
+    background: linear-gradient(to bottom right, #d7a86e, #4e2a04);
 }
 
-/* 🫐 Blueberry (light blue → dark blue edges) */
+/* 🫐 BLUEBERRY */
 .cards article:nth-child(2) {
     background: linear-gradient(to bottom right, #64b5f6, #0d47a1);
 }
 
-/* 🍌 Banana (yellow → darker yellow edges) */
+/* 🍌 BANANA */
 .cards article:nth-child(3) {
     background: linear-gradient(to bottom right, #fff176, #f9a825);
 }
 
-/* Colorful cards */
-.cards article:nth-child(1) {
-    background-color: #e53935; /* red */
+/* BUTTON */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: pink;
+    color: black;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
 }
 
-.cards article:nth-child(2) {
-    background-color: #1e88e5; /* blue */
+/* ===== RECIPE PAGE ===== */
+
+.pancake-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  padding: 1rem;
 }
 
-.cards article:nth-child(3) {
-    background-color: #43a047; /* green */
+.pancake-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    background-color: #ff9800;
+.pancake-card img {
+  width: 100%;
+  height: 120px;        /* fixed height instead of full-page */
+  object-fit: cover;    /* crops the image nicely */
+}
+
+.pancake-card p {
+  padding: 8px;
+  font-weight: bold;
+  font-size: 14px;
+}
+/* ===== INDIVIDUAL RECIPE BACKGROUNDS ===== */
+
+/* Chocolate */
+.chocolate-page {
+    background: linear-gradient(#d7a86e, #4e2a04);
     color: white;
+}
+
+/* Blueberry */
+.blueberry-page {
+    background: linear-gradient(#64b5f6, #0d47a1);
+    color: white;
+}
+
+/* Banana */
+.banana-page {
+    background: linear-gradient(#fff176, #f9a825);
+    color: black;
+}
+
+
+/* ===== ABOUT PAGE ===== */
+
+.about-page {
+    padding: 40px;
+}
+
+/* TOP: image + text side by side */
+.about-top {
+    display: flex;
+    gap: 2rem;
+    align-items: stretch;
+}
+
+/* Image */
+.about-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* Text */
+.about-text {
+    max-width: 500px;
+}
+
+.about-text p {
+    line-height: 1.6;
+}
+
+/* MISSION (full width box) */
+.about-mission {
+    margin-top: 30px;
+    padding: 20px;
+    background-color:none;
+    border-radius: 10px;
+}
+
+/* BOTTOM 3 BOXES */
+.about-values {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.about-values div {
+    width: 30%;
+    text-align: center;
     padding: 15px;
+    background-color: #ffcc80;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+/* Only for pages except home */
+body.bg-pancake {
+  position: relative;
+  background-color: #fff; /* fallback */
+}
+
+/* faint pancake background */
+body.bg-pancake:before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("pancakes.jpg") no-repeat center center;
+  background-size: cover;
+  opacity: 0.12; /* controls faintness */
+  z-index: -1;
+  pointer-events: none;
 }
