@@ -196,6 +196,11 @@ nav {
     border-radius: 12px;
     object-fit: cover;
 }
+/* About page subtitles */
+.about-page h2,
+.about-page h3 {
+    color: #fb61ae;
+}
 
 /* Text */
 .about-text {
