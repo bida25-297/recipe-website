@@ -3,6 +3,11 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
+/* Header */
+header {
+    background-color: #ff69b4;
+    padding: 15px 20px;
+}
 
 /* NAVIGATION */
 nav {
