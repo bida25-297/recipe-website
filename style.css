@@ -255,3 +255,57 @@ body.bg-pancake:before {
   z-index: -1;
   pointer-events: none;
 }
+
+/* Contact page */
+.contact-page {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.contact-page h1 {
+    color: #ff69b4;
+}
+
+.contact-page p {
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.contact-page div {
+    margin-bottom: 15px;
+}
+
+.contact-page label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.contact-page input,
+.contact-page textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ffb6c1;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.contact-page textarea {
+    height: 120px;
+}
+
+.contact-page button {
+    background-color: #ff69b4;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact-page button:hover {
+    background-color: #e05fa0;
+}
