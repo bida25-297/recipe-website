@@ -20,45 +20,40 @@
         <a href="feedback.html">Feedback</a>
     </nav>
 
-    <main>
+    <main class="feedback-page">
+    <h1>Feedback</h1>
+    <p>We value your opinion! Please take a moment to share your experience with Pancake Delight. Your feedback helps us improve and serve you better.</p>
 
-    <section>
-        <h2>Feedback</h2>
-    </section>
-
-    <section>
-        <form>
+    <form>
+        <div>
             <label>Name:</label>
-            <input type="text">
-
+            <input type="text" placeholder="Enter your full name">
+        </div>
+        <div>
             <label>Rating:</label>
-            <input type="number">
-
+            <select>
+                <option value="">-- Select a rating --</option>
+                <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+                <option value="4">⭐⭐⭐⭐ Very Good</option>
+                <option value="3">⭐⭐⭐ Good</option>
+                <option value="2">⭐⭐ Fair</option>
+                <option value="1">⭐ Poor</option>
+            </select>
+        </div>
+        <div>
             <label>Comment:</label>
-            <textarea></textarea>
+            <textarea placeholder="Tell us about your experience..."></textarea>
+        </div>
+        <button type="submit">Submit Feedback</button>
+    </form>
 
-            <button type="submit">Submit</button>
-        </form>
+    <section class="reviews">
+        <h2>Customer Reviews</h2>
+        <div class="review-card">⭐⭐⭐ Best pancakes!</div>
+        <div class="review-card">⭐⭐⭐⭐ Loved it!</div>
+        <div class="review-card">⭐⭐⭐⭐⭐ Amazing taste!</div>
     </section>
-
-    <section>
-        <h3>Customer Reviews</h3>
-
-        <article>
-            <p>★★★ Best pancakes!</p>
-        </article>
-
-        <article>
-            <p>★★★★ Loved it!</p>
-        </article>
-
-        <article>
-            <p>★★★★★ Amazing taste!</p>
-        </article>
-
-    </section>
-
-    </main>
+</main>
 
     <footer>
         <p>© 2026 Pancake Delight</p>
