@@ -8,7 +8,12 @@ header {
     background-color: #ff69b4;
     padding: 15px 20px;
 }
-
+.chocolate-page header,
+.banana-page header,
+.blueberry-page header {
+    background-color: transparent;
+    padding: 15px 20px;
+}
 /* NAVIGATION */
 nav {
     position: absolute;   /* puts it on top of image */
